@@ -80,8 +80,8 @@ const Home = () => {
 						<Typography variant='body2'>
 							I have studied through the Open University, allowing me to gain many transferable skills such as problem solving, personal 
 							accountability, reliability and time management during independent learning or while working alongside my peers. This experience 
-							has meant I have been able to develop my stills though focusing on what I need to practice catering my learning 
-							to what I needed. While my studies are now complete,  having gained a BSc with Honours in Computing, IT and Design, I have since 
+							has meant I have been able to develop my skills through focusing on what I needed to practice, catering my learning 
+							to my strengths. While my studies are now complete,  having gained a BSc with Honours in Computing, IT and Design, I have since 
 							spent time developing new skills using frameworks, libraries or languages I lacked experience in. Additionally, I have conducted 
 							freelance work, creating a B2B company website for <a href='https://wadebuildingservices.co.uk/'>Wade Building Services</a>. To do this, 
 							I worked  alongside a sales department 
