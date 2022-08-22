@@ -66,9 +66,6 @@ function Hire() {
                 <Typography align='center'gutterBottom variant='body 1' component='div'>eve.drake@protonmail.com</Typography>
               </Grid>
               < Divider variant='middle'></Divider>
-              <Grid item md={12}>
-                 <Typography align='center' gutterBottom variant='body 1' component='div'>07415 372 186</Typography>
-             </Grid>
 
               <Grid item md={12}>
                 <form onSubmit={onSubmit} >
