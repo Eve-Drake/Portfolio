@@ -44,7 +44,7 @@ const Home = () => {
 										BSc (Hons) CITS
 									</Divider>
 									<Typography variant='h3'>Web Development</Typography>
-									<Typography variant='subtitle1' gutterBottom >Thank you for your interest. On this site, I aim to show my key web development skills though a variety of recent projects</Typography>
+									<Typography variant='subtitle1' gutterBottom >Thank you for your interest. On this site, I aim to show my key web development skills through a variety of recent projects</Typography>
 								</motion.div>
 								
 								<motion.div 
@@ -91,7 +91,7 @@ const Home = () => {
 					</Grid>
 					
 					<Grid item md={5} sx={{
-						display: "flex", 
+						display: {md: "flex", xs: 'none'}, 
 						alignItems: 'center', 
 						pl: {md: 12, sx: 10}, }}>
 						<AnimatedCoder />
