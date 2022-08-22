@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+
+//theme defaults
+$p-light: #eceff1;
+$p-main: #212121;
+$p-dark: #000000;
+$p-contrast: #fff;
+
+$s-light: #ff9d3f;
+$s-main: #ef6c00;
+$s-dark: #b53d00;
+$s-contrast: #000;
+
+//spacing
+$base-padding: 5px;
+$base-margin: 10px;
+
+//borders
+$base-border-width: 1px;
+$base-border-radius: 15px;
+
+//fonts
+$base-font:'Source Sans Pro', sans-serif;
+$base-font-size: 18px;
+$main-heading-font-size: 35px;
+$subheading-font-size:20px;
+$font-weight-bold: 600;
+
+
+//box-shadow
+$base-box-shadow: 1px 3px 5px rgb(131, 131, 131);
+
+//standards
+$paragraph-font-align: justify;
+$paragraph-font-weight: 300;
+
+
+//content width
+$content-width:10000px;
+
+//breakpoint
+$breakpoint: 799px;
+
+//navbar height
+$nav-height: 70px;
