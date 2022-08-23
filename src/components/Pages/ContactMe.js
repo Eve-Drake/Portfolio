@@ -63,7 +63,7 @@ function Hire() {
               </Grid>
 
               <Grid item md={12} >
-                <Typography align='center'gutterBottom variant='body 1' component='div'>eve.drake@protonmail.com</Typography>
+                <Typography align='center'gutterBottom variant='body 1' component='div'>contact.evedrake@gmail.com</Typography>
               </Grid>
 
               <Grid item md={12}>
