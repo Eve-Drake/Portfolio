@@ -27,7 +27,7 @@ const SmallProjectsPage = () => {
                     <h2 >Explanation</h2>
                     <h3>Functionality...</h3>
                     <Typography variant='body1'>On this page, I have included a number of smaller basic projects to show an understanding of fundemental factors as well as maintain my skills.
-                    These include projects like a click counter, basic expense tracker and a random dog image generator 
+                    These include projects like a click counter, card draw component and a random dog image generator 
                     using the <a href="https://dog.ceo/api/breeds/image/random">dog image API</a>. I am continuing to add 
                     various smaller projects as time goes on with further plans including: Light mode/Dark mode, QR code generator and simple task tracker.  </Typography>
                 </Container>
