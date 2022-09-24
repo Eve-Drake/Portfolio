@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ClickCounter from '../SmallProjects/ClickCounter'
 import DogAPI from '../SmallProjects/DogAPI';
-import ExpenseTracker from  '../SmallProjects/ExpenseTracker'
 import WordGenerator from '../SmallProjects/WordGenerator';
 import UserGenerator from '../SmallProjects/UserGenerator';
 import RandomCard from '../SmallProjects/RandomCard'
@@ -41,9 +40,6 @@ const SmallProjectsPage = () => {
                         
                     <Typography variant='h4'>Click Counter</Typography>
                         <ClickCounter />
-                    
-                    <Typography variant='h4'>Expense Tracker</Typography>
-                        <ExpenseTracker />
 
                     <Typography variant='h4'>Word Generator</Typography>
                         <WordGenerator />
