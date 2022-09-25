@@ -15,10 +15,11 @@ const Home = () => {
 			<Nav />
 			<ContactActionButton />
 			{/*Hero page with motion animation */}
-			<Paper className='hero' sx={{
-				backgroundColor: theme.palette.primary.dark,
-				borderRadius: "0",
-				minHeight: '90vh',
+			<div className='hero' style={{
+				backgroundImage: "url(" + "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" + ")",
+				backgroundSize: 'cover',
+				backgroundPosition: 'center',
+				backgroundAttachment: 'fixed',
 				alignItems: "center",
 				display: 'flex',
 				justifyContent: 'center', 
@@ -33,7 +34,7 @@ const Home = () => {
 						<Container sx={{
 							textAlign: "center"
 						}}>
-								<motion.div animate={{color: theme.palette.primary.contrastText}}>
+								<motion.div animate={{color: theme.palette.primary.contrastText, background: theme.palette.primary.main, borderRadius: '15px'}}>
 									<Typography variant="h1">Eve Drake</Typography>
 								
 									<Divider light variant='middle'  sx={{
@@ -64,7 +65,7 @@ const Home = () => {
 							</Box>
 					</Grid>
 				</Grid>
-			</Paper>
+			</div>
 
 			{/*Body */}
 			<Grid container sx={{p:6}}>

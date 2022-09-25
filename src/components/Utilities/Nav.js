@@ -36,7 +36,7 @@ const Nav = () => {
 
   return (
     <AppBar className="nav" position="static" sx={{
-      backgroundColour: theme.palette.primary.dark,
+      backgroundColour: theme.palette.primary.main,
       color: theme.palette.primary.contrastText
     }}>
       <Container maxWidth="xl">
