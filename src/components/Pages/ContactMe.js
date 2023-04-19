@@ -1,6 +1,6 @@
 
-import { Card, CardContent, Grid, Typography, Box, Avatar, TextField, Snackbar, Button, Divider } from '@mui/material';
-import { Container } from '@mui/system';
+import { Card, CardContent, span, Typography, Box, Avatar, TextField, Snackbar, Button,} from '@mui/material';
+import { div } from '@mui/system';
 import Nav from '../Utilities/Nav';
 import { theme } from '../../themes/Theme';
 import React, { useState } from 'react';
@@ -51,22 +51,22 @@ function Hire() {
   return (
     <Box >
       <Nav />
-      <Container sx={{display: 'flex', justifyContent: 'center', p: {md: 5, sm: 1}}}>
+      <div sx={{display: 'flex', justifyContent: 'center', p: {md: 5, sm: 1}}}>
         <Card sx={{width: {md: '40vw', sm: '90vh'}, borderRadius:1, border: 1}}>
           <CardContent sx={{backgroundColor: theme.palette.primary.light, }}>
-            <Grid container>
+            <span div>
               <Box sx={{alignItems: 'center', margin: 'auto', display: {md: 'block', sm:'none'}}}>
                 <Avatar src='https://www.svgrepo.com/show/250446/coding-html.svg' alt='orange </>'/>
               </Box>
-              <Grid item md={12}>
+              <span item md={12}>
                 <Typography align='center' gutterBottom variant='h3' component='div'>Eve Drake</Typography>
-              </Grid>
+              </span>
 
-              <Grid item md={12} >
+              <span item md={12} >
                 <Typography align='center'gutterBottom variant='body 1' component='div' >contact.evedrake@gmail.com</Typography>
-              </Grid>
+              </span>
 
-              <Grid item md={12}>
+              <span item md={12}>
                 <form onSubmit={onSubmit} >
                   <TextField label='Your Name'sx={{mx:3, width: '88%', my: 1}}
                     type='text'
@@ -90,7 +90,7 @@ function Hire() {
                   <Button fullWidth variant='outlined' type='submit' >Submit</Button>
                 </form>
 
-              </Grid>
+              </span>
 
               <Snackbar
                 open={open}
@@ -98,10 +98,10 @@ function Hire() {
                 onClose={handleClose}
                 message="Thank you. Message Sent"
                 />
-            </Grid>
+            </span>
           </CardContent>
         </Card>
-      </Container>
+      </div>
     </Box>
   );
 }

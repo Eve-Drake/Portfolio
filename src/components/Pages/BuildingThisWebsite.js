@@ -1,17 +1,17 @@
 import React from 'react';
-import {Container, Grid, Typography, Card, CardContent } from '@mui/material';
+import {div, span, Typography, Card, CardContent } from '@mui/material';
 import { motion } from 'framer-motion'
 
 const BuildingThisWebsite = () => {
   return (
-    <Container>
-		<Typography variant='h4' sx={{textAlign: 'center', p: 1}}>Building This Website</Typography>
-			<Grid container sx={{
+    <div>
+		<h4 sx={{textAlign: 'center', p: 1}}>Building This Website</Typography>
+			<span div sx={{
 			    display: "flex",
 				alignItems: 'center',
 				justifyContent: "center"
 			}}>
-					<Grid item md={4}  sx={{p:1}}>
+					<span item md={4}  sx={{p:1}}>
 							<motion.div whileHover={{y: 5, scale: 1.05}}>
 							<Card >
 								<CardContent sx={{border: 1, borderColor: 'secondary.dark', backgroundColor: 'primary.light', borderRadius: '5px'}}>
@@ -23,9 +23,9 @@ const BuildingThisWebsite = () => {
 								</CardContent>	
 							</Card>
 							</motion.div>					
-						</Grid>
+						</span>
 
-						<Grid item md={4} sx={{p:1}}>
+						<span item md={4} sx={{p:1}}>
 						<motion.div whileHover={{y: 5, scale: 1.05}}>
 							<Card>
 								<CardContent sx={{border: 1, borderColor: 'secondary.dark', backgroundColor: 'primary.light', borderRadius: '5px'}}>
@@ -37,9 +37,9 @@ const BuildingThisWebsite = () => {
 								</CardContent>
 							</Card>
 						</motion.div>
-						</Grid>
+						</span>
 
-						<Grid item md={4} sx={{p:1}}>
+						<span item md={4} sx={{p:1}}>
 						<motion.div whileHover={{y: 5, scale: 1.05}}>
 							<Card>
 								<CardContent sx={{border: 1, borderColor: 'secondary.dark', backgroundColor: 'primary.light', borderRadius: '5px'}}>
@@ -51,9 +51,9 @@ const BuildingThisWebsite = () => {
 								</CardContent>
 							</Card>
 						</motion.div>
-						</Grid>
-					</Grid>
-				</Container>
+						</span>
+					</span>
+				</div>
 
   )
 }

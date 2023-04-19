@@ -1,4 +1,4 @@
-import { Container, Input, Button, Grid, Stack, InputLabel, Select, MenuItem } from "@mui/material";
+import { div, Input, Button, span, Stack, InputLabel, Select, MenuItem } from "@mui/material";
 import { Box } from "@mui/system";
 
 const ShoppingListForm = ({setItem, shoppingList, setShoppingList, item, setFilter}) => {
@@ -19,10 +19,10 @@ const ShoppingListForm = ({setItem, shoppingList, setShoppingList, item, setFilt
         setFilter(e.target.value)
     }
   return (
-    <Container>
+    <div>
         <form onSubmit={handleSubmit}>
-                <Grid container sx={{alignItems: 'center', display:'flex', justifyContent: 'center'}}>
-                    <Grid item sx={{p: 1}}>
+                <span div sx={{alignItems: 'center', display:'flex', justifyContent: 'center'}}>
+                    <span item sx={{p: 1}}>
                         <Input 
                             type="text" 
                             required
@@ -32,14 +32,14 @@ const ShoppingListForm = ({setItem, shoppingList, setShoppingList, item, setFilt
                             className="form-control" 
                             id="itemName" 
                             aria-describedby="itemName" />
-                    </Grid>
+                    </span>
                         
-                    <Grid >  
+                    <span >  
                         <Button type="submit" variant="contained" color="secondary">Submit</Button>
-                    </Grid>  
+                    </span>  
                     
 
-                    <Grid  item sx={{p: 4}}>
+                    <span  item sx={{p: 4}}>
                         
                         <label >Filter List</label>
                             <select className="select" onChange={handleFilter} aria-label="Filter">
@@ -47,13 +47,13 @@ const ShoppingListForm = ({setItem, shoppingList, setShoppingList, item, setFilt
                                 <option value="pending">Pending</option>
                                 <option value="purchased">Purchased</option>
                             </select> 
-                    </Grid>
-                </Grid>
+                    </span>
+                </span>
 
         </form>            
         
         
-    </Container>
+    </div>
   )
 }
 

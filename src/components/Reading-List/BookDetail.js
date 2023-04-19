@@ -1,4 +1,4 @@
-import { Box, Paper, CircularProgress, Container, Button, Grid} from '@mui/material'
+import { Box, Paper, CircularProgress, div, Button, span} from '@mui/material'
 import { useState, useContext, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { BiArrowBack } from "react-icons/bi";
@@ -81,24 +81,24 @@ const BookDetail = () => {
     <div>
         <Nav />
         <ContactActionButton />
-        <Container sx={{pb: 5}}>
+        <div sx={{pb: 5}}>
             <h1> Book Detail</h1>
             <Paper sx={{pb: 3}}>
-                <Grid container>
-                    <Grid item md={12} sx={{display: 'flex', justifyContent: 'space-between', p: 1}}>
+                <span div>
+                    <span item md={12} sx={{display: 'flex', justifyContent: 'space-between', p: 1}}>
                         <Button variant='contained' onClick={()=> nav(-1)}><BiArrowBack/>Back</Button>
                         <Button color='error' variant="contained" onClick={handleDelete}>Delete</Button>
-                    </Grid>
+                    </span>
 
-                    <Grid item md={11} sx={{p:3}}>
+                    <span item md={11} sx={{p:3}}>
                         <h2 >{book.title}</h2>
                         <h5 >Genre: {book.genres}</h5>
                         <h3 >By {book.author}</h3>
-                    </Grid>
-                    <Grid item md={1}>
+                    </span>
+                    <span item md={1}>
                         <CircularProgress variant="determinate" value={(book.pages / book.currentPage) * 100}></CircularProgress>
-                    </Grid>
-                    <Grid item sx={{px: 3}}>
+                    </span>
+                    <span item sx={{px: 3}}>
                         <Button onClick={handleInfo}>Author Info</Button>
                             {authorInfo && 
                                 <div>
@@ -120,10 +120,10 @@ const BookDetail = () => {
                                 </div>
                             } 
                         {loading && <h1>Loading...</h1>}
-                    </Grid>
-                </Grid>
+                    </span>
+                </span>
             </Paper>
-        </Container>
+        </div>
     </div>
   )
 }

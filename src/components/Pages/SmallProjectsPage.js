@@ -5,9 +5,6 @@ import WordGenerator from '../SmallProjects/WordGenerator';
 import UserGenerator from '../SmallProjects/UserGenerator';
 import RandomCard from '../SmallProjects/RandomCard'
 import Nav from '../Utilities/Nav';
-import { Container } from '@mui/system';
-import { Stack, Divider, Paper, Typography } from '@mui/material';
-import { theme } from '../../themes/Theme';
 import ContactActionButton from '../Utilities/ContactActionButton';
 
 
@@ -16,45 +13,34 @@ const SmallProjectsPage = () => {
         <div className='smallProjectsPage'>
             <Nav />
             <ContactActionButton /> 
-            <Paper sx={{
-				backgroundColor: theme.palette.primary.dark,
-                color: theme.palette.primary.contrastText,
-				borderRadius: "0",
-				minHeight: '20vh', 
-                pb: 2
-			    }}>
-                <Container>
+            
+                <div>
                     <h2 >Explanation</h2>
                     <h3>Functionality...</h3>
-                    <Typography variant='body1'>On this page, I have included a number of smaller basic projects to show an understanding of fundemental factors as well as maintain my skills.
+                    <p>On this page, I have included a number of smaller basic projects to show an understanding of fundemental factors as well as maintain my skills.
                     These include projects like a click counter, card draw component and a random dog image generator 
                     using the <a href="https://dog.ceo/api/breeds/image/random">dog image API</a>. I am continuing to add 
-                    various smaller projects as time goes on with further plans including: Light mode/Dark mode, QR code generator and simple task tracker.  </Typography>
-                </Container>
-            </Paper>
-            <Container>
-                <Stack 
-                    sx={{p:5, display: 'flex', justifyContent: 'center', alignItems: 'center',}} 
-                    divider={<Divider orientation="horizontal" flexItem />}
-                    spacing={{md:4}}>
-                        
-                    <Typography variant='h4'>Click Counter</Typography>
+                    various smaller projects as time goes on with further plans including: Light mode/Dark mode, QR code generator and simple task tracker.  </p>
+                </div>
+            <div>
+                
+                  
+                    <h4>Click Counter</h4>
                         <ClickCounter />
 
-                    <Typography variant='h4'>Word Generator</Typography>
+                    <h4>Word Generator</h4>
                         <WordGenerator />
 
-                    <Typography variant='h4'>Dog Image API</Typography>
+                    <h4>Dog Image API</h4>
                         <DogAPI />
 
-                    <Typography variant='h4'>Random Card</Typography>
+                    <h4>Random Card</h4>
                         <RandomCard />
                     
-                    <Typography variant='h4'>Random User</Typography>
+                    <h4>Random User</h4>
                         <UserGenerator />
-                </Stack>
 
-            </Container>
+            </div>
 
 
         </div>

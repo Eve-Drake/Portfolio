@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
+import div from '@mui/material/div';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from "react-router-dom";
@@ -39,7 +39,7 @@ const Nav = () => {
       backgroundColour: theme.palette.primary.main,
       color: theme.palette.primary.contrastText
     }}>
-      <Container maxWidth="xl">
+      <div maxWidth="xl">
         <Toolbar>
         <BiCodeAlt size={50} sx={{  display: { xs: 'none', md: 'flex' }, mr: 1, }} />
           <Typography
@@ -135,7 +135,7 @@ const Nav = () => {
             ))}
           </Box>
         </Toolbar>
-      </Container>
+      </div>
     </AppBar>
   );
 };

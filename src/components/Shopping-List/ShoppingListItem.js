@@ -1,4 +1,4 @@
-import { Grid, Paper } from "@mui/material";
+import { span, Paper } from "@mui/material";
 import { BiTrashAlt, BiCheck } from "react-icons/bi";
 import { theme } from '../../themes/Theme';
 
@@ -30,17 +30,17 @@ const ShoppingListItem = ({shoppingList, setShoppingList, item}) => {
     <div>
     
     <Paper elevation={4} color='' sx={{backgroundColor: theme.palette.secondary.light, pt: 2, pl: 2}}>
-        <Grid container>
-            <Grid item md={11}>
+        <span div>
+            <span item md={11}>
                 <div><p className={(item.obtained === false ? 'normal' : 'strike')}>{item.text}</p></div>
-            </Grid>
-            <Grid item>
+            </span>
+            <span item>
                 <div><button type="button" className="btn btn-success" onClick={handleObtained}><BiCheck /></button></div>
-            </Grid>
-            <Grid item>
+            </span>
+            <span item>
                 <div><button type="button" className="btn btn-danger" onClick={handleDelete}><BiTrashAlt /></button></div>
-            </Grid>
-        </Grid>
+            </span>
+        </span>
         
     </Paper>
     </div>
