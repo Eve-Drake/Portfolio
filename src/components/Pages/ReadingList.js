@@ -3,10 +3,7 @@ import Nav from '../Utilities/Nav'
 import { BookContext } from '../Reading-List/BookContext';
 import { Link } from 'react-router-dom';
 import BookForm from '../Reading-List/BookForm';
-import { Box, div } from '@mui/system';
-import { Button, Paper } from '@mui/material';
 import { useState } from 'react';
-import { theme } from '../../themes/Theme';
 import ContactActionButton from '../Utilities/ContactActionButton';
 
 const ReadingList = () => {
@@ -22,12 +19,7 @@ const ReadingList = () => {
       <div >
         <Nav /> 
         <ContactActionButton />
-        <Paper sx={{
-				backgroundColor: theme.palette.primary.dark,
-        color: theme.palette.primary.contrastText,
-				borderRadius: "0",
-				minHeight: '20vh', 
-			  }}>
+        <div>
           <div>
             <h2 >Reading List Application</h2>
             <h3>Functionality...</h3>
@@ -36,22 +28,22 @@ const ReadingList = () => {
            . Additionally, within the book detail page, I have also used the <a href='https://openlibrary.org/dev/docs'>Open Libary API</a> to get information about the author, 
            as well as their top works, if requested.</p>
           </div>
-      </Paper>
+      </div>
           <div>
           
-          <Button variant="contained" color="success" onClick={handleClick}>{addClose}</Button>
-          <Box sx={{display: toggle, p: 3}}>
+          <button onClick={handleClick}>{addClose}</button>
+          <div>
             <BookForm />
-          </Box>
+          </div>
 
             {books.map((book)=>
               <Link key={book.id} to={`book/${book.id}`}>
-                  <Paper  sx={{p: 1, m: 3, backgroundColor: theme.palette.primary.light}}>
+                  <div>
                     <ul >
                       <h4>{book.title}</h4>
                       <p>{book.author}</p>
                     </ul>
-                  </Paper>
+                  </div>
               </Link>
           )}
           

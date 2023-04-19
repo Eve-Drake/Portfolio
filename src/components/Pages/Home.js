@@ -1,6 +1,4 @@
-
 import Nav from '../Utilities/Nav';
-import { theme } from '../../themes/Theme';
 import { Link } from 'react-router-dom';
 import ContactActionButton from '../Utilities/ContactActionButton';
 
@@ -15,7 +13,7 @@ const Home = () => {
 				<span >
 					<span>
 						<div>
-								<div animate={{color: theme.palette.primary.contrastText, background: theme.palette.primary.main, borderRadius: '15px'}}>
+								<div>
 									<h1>Eve Drake</h1>
 								
 									
@@ -25,28 +23,24 @@ const Home = () => {
 									<h4>Thank you for your interest. On this site, I aim to show my key web development skills through a variety of recent projects</h4>
 								</div>
 								
-								<div 
-									animate={{y: 20, scale: 1.3}}
-									whileHover={{scale: 1.4, color: theme.palette.secondary.contrastText}}>
-									<button component={Link} to="ContactMe" variant='contained' size='large' color='secondary' >Further Questions? Contact Me</button>
-								</div>
+								
+								
+								<button component={Link} to="ContactMe" variant='contained' size='large' color='secondary' >Further Questions? Contact Me</button>
+								
 						</div>
 					</span>
 
-					<span item md={5} sx={{
-						display: "flex",
-						justifyContent:"center"
-					}}>
-							<div sx={{ display: {xs: 'none', sm: 'none', md: 'flex' } }}>
-								<img  style={{width:"250px"}}src='https://www.svgrepo.com/show/250446/coding-html.svg' alt='Orange </>'></img>
+					<span>
+							<div >
+								<img src='https://www.svgrepo.com/show/250446/coding-html.svg' alt='Orange </>'></img>
 							</div>
 					</span>
 				</span>
 			</div>
 
 			{/*Body */}
-			<span div sx={{p:6}}>
-					<span item md={7}>
+			<span>
+					<span >
 						<h3>Hi...</h3>
 						<h4>Personal Statement</h4>
 						<p>

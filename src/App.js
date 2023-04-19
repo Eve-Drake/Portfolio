@@ -5,7 +5,7 @@ import SmallProjectsPage from './components/Pages/SmallProjectsPage';
 import Hire from './components/Pages/ContactMe';
 import ShoppingList from './components/Pages/ShoppingList';
 import { theme } from './themes/Theme'
-import {ThemeProvider} from '@mui/material';
+
 
 import { BookProvider } from './components/Reading-List/BookContext';
 import ReadingList from './components/Pages/ReadingList';
@@ -13,7 +13,7 @@ import BookDetail from './components/Reading-List/BookDetail';
 
 function App() {
   return (
-    <ThemeProvider theme = {theme}>
+    
 
       <Router>
         <div className="App">   
@@ -30,7 +30,7 @@ function App() {
           </BookProvider>
         </div>
       </Router>
-    </ThemeProvider>
+    
   );
 }
 

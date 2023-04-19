@@ -1,10 +1,8 @@
 import ShoppingListForm from '../Shopping-List/ShoppingListForm'
 import { useState, useEffect } from "react";
 import ShoppingListItemList from '../Shopping-List/ShoppingListItemList'
-import BootstrapNav from '../Utilities/Nav';
-import { div, Paper, Typography } from '@mui/material';
-import { theme } from '../../themes/Theme';
 import ContactActionButton from '../Utilities/ContactActionButton';
+import Nav from '../Utilities/Nav';
 
 const Shopping = () => {
     const [item, setItem] = useState("");
@@ -33,23 +31,17 @@ const Shopping = () => {
 
   return (
     <div>
-      <BootstrapNav />
+      <Nav />
       <ContactActionButton />
-      <Paper sx={{
-				backgroundColor: theme.palette.primary.dark,
-        color: theme.palette.primary.contrastText,
-				borderRadius: "0",
-				minHeight: '20vh', 
-        pb: 2
-			  }}>
+      <div>
           <div>
             <h2 >A Simple Shopping List</h2>
             <h3>Functionality...</h3>
-            <Typography variant='body1'>This is a shopping list created to demonstrate passing values and functions from parent components to child 
+            <p>This is a shopping list created to demonstrate passing values and functions from parent components to child 
               components.It consists of: Shopping, ShoppingListForm, ShoppingListItemList and ShoppingList Item. 
-              The parent component contains all the state (the shopping list and any selected filter). </Typography>
+              The parent component contains all the state (the shopping list and any selected filter). </p>
           </div>
-      </Paper>
+      </div>
 
       <div>
         <h2>Shopping...</h2>

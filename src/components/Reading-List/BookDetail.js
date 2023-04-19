@@ -1,8 +1,5 @@
-import { Box, Paper, CircularProgress, div, Button, span} from '@mui/material'
 import { useState, useContext, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-import { BiArrowBack } from "react-icons/bi";
-
 import { BookContext } from './BookContext';
 import { useNavigate } from "react-router-dom";
 import ContactActionButton from '../Utilities/ContactActionButton';
@@ -17,7 +14,7 @@ const BookDetail = () => {
     
     useEffect(()=>{
         for ( let i = 0; i < books.length; i++){
-            if (books[i].id == id){
+            if (books[i].id === id){
                 setBook(books[i])
             }
         }
@@ -81,25 +78,25 @@ const BookDetail = () => {
     <div>
         <Nav />
         <ContactActionButton />
-        <div sx={{pb: 5}}>
+        <div>
             <h1> Book Detail</h1>
-            <Paper sx={{pb: 3}}>
+            <div>
                 <span div>
-                    <span item md={12} sx={{display: 'flex', justifyContent: 'space-between', p: 1}}>
-                        <Button variant='contained' onClick={()=> nav(-1)}><BiArrowBack/>Back</Button>
-                        <Button color='error' variant="contained" onClick={handleDelete}>Delete</Button>
+                    <span >
+                        <button>Back</button>
+                        <button>Delete</button>
                     </span>
 
-                    <span item md={11} sx={{p:3}}>
+                    <span >
                         <h2 >{book.title}</h2>
                         <h5 >Genre: {book.genres}</h5>
                         <h3 >By {book.author}</h3>
                     </span>
-                    <span item md={1}>
-                        <CircularProgress variant="determinate" value={(book.pages / book.currentPage) * 100}></CircularProgress>
+                    <span >
+                        Progress
                     </span>
-                    <span item sx={{px: 3}}>
-                        <Button onClick={handleInfo}>Author Info</Button>
+                    <span >
+                        <button>Author Info</button>
                             {authorInfo && 
                                 <div>
                                     <div>
@@ -111,18 +108,18 @@ const BookDetail = () => {
                             }
                             {more &&
                                 <div>
-                                    <Button onClick={handleMore}>View More Works?</Button>
-                                    <Box sx={{pl:5 }}>
+                                    <button onClick={handleMore}>View More Works?</button>
+                                    <span>
                                         {works.map((work)=>
                                             <li >{work.title}</li>
                                         )}
-                                    </Box>
+                                    </span>
                                 </div>
                             } 
                         {loading && <h1>Loading...</h1>}
                     </span>
                 </span>
-            </Paper>
+            </div>
         </div>
     </div>
   )

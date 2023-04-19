@@ -1,8 +1,4 @@
-
-import { Card, CardContent, span, Typography, Box, Avatar, TextField, Snackbar, Button,} from '@mui/material';
-import { div } from '@mui/system';
 import Nav from '../Utilities/Nav';
-import { theme } from '../../themes/Theme';
 import React, { useState } from 'react';
 import { send } from 'emailjs-com';
 
@@ -49,60 +45,60 @@ function Hire() {
   };
 
   return (
-    <Box >
+    <div >
       <Nav />
-      <div sx={{display: 'flex', justifyContent: 'center', p: {md: 5, sm: 1}}}>
-        <Card sx={{width: {md: '40vw', sm: '90vh'}, borderRadius:1, border: 1}}>
-          <CardContent sx={{backgroundColor: theme.palette.primary.light, }}>
-            <span div>
-              <Box sx={{alignItems: 'center', margin: 'auto', display: {md: 'block', sm:'none'}}}>
-                <Avatar src='https://www.svgrepo.com/show/250446/coding-html.svg' alt='orange </>'/>
-              </Box>
-              <span item md={12}>
-                <Typography align='center' gutterBottom variant='h3' component='div'>Eve Drake</Typography>
+      <div >
+        <div>
+          <div>
+            <span>
+              <div>
+                <img src='https://www.svgrepo.com/show/250446/coding-html.svg' alt='orange </>'/>
+              </div>
+              <span>
+                <p>Eve Drake</p>
               </span>
 
-              <span item md={12} >
-                <Typography align='center'gutterBottom variant='body 1' component='div' >contact.evedrake@gmail.com</Typography>
+              <span>
+                <p>contact.evedrake@gmail.com</p>
               </span>
 
               <span item md={12}>
                 <form onSubmit={onSubmit} >
-                  <TextField label='Your Name'sx={{mx:3, width: '88%', my: 1}}
+                  <input
                     type='text'
                     name='from_name'
                     value={toSend.from_name}
                     onChange={handleChange}
                   />
-                  <TextField label='Your Email' sx={{mx: 3,  width: '88%', my: 1}}
+                  <input
                     type='text'
                     name='reply_to'
                     value={toSend.reply_to}
                     onChange={handleChange}
                   />
                   
-                  <TextField multiline minRows={5} label='Enter your Message' sx={{mx: 3, my:1, width: '88%', pb: 3,}} 
+                  <input 
                     type='textarea'
                     name='message'
                     value={toSend.message}
                     onChange={handleChange}
                   />
-                  <Button fullWidth variant='outlined' type='submit' >Submit</Button>
+                  <button>Submit</button>
                 </form>
 
               </span>
 
-              <Snackbar
+              <div
                 open={open}
                 autoHideDuration={6000}
                 onClose={handleClose}
                 message="Thank you. Message Sent"
                 />
             </span>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
-    </Box>
+    </div>
   );
 }
 

@@ -1,5 +1,3 @@
-import { div, Input, Button, span, Stack, InputLabel, Select, MenuItem } from "@mui/material";
-import { Box } from "@mui/system";
 
 const ShoppingListForm = ({setItem, shoppingList, setShoppingList, item, setFilter}) => {
 
@@ -21,9 +19,9 @@ const ShoppingListForm = ({setItem, shoppingList, setShoppingList, item, setFilt
   return (
     <div>
         <form onSubmit={handleSubmit}>
-                <span div sx={{alignItems: 'center', display:'flex', justifyContent: 'center'}}>
+                <span>
                     <span item sx={{p: 1}}>
-                        <Input 
+                        <input 
                             type="text" 
                             required
                             placeholder="Enter an Item"
@@ -35,11 +33,11 @@ const ShoppingListForm = ({setItem, shoppingList, setShoppingList, item, setFilt
                     </span>
                         
                     <span >  
-                        <Button type="submit" variant="contained" color="secondary">Submit</Button>
+                        <button>Submit</button>
                     </span>  
                     
 
-                    <span  item sx={{p: 4}}>
+                    <span>
                         
                         <label >Filter List</label>
                             <select className="select" onChange={handleFilter} aria-label="Filter">
