@@ -63,7 +63,7 @@ const BookForm = () => {
                 value={totalPages}
                 onChange={(e) => setTotalPages(e.target.value)}
                 />
-                <Button type='submit'variant="contained">Submit</Button>
+                <button type='submit'variant="contained">Submit</button>
             </form>
       </div>
 

@@ -4,22 +4,19 @@ import ContactMe from './components/Pages/ContactMe';
 import SmallProjectsPage from './components/Pages/SmallProjectsPage';
 import Hire from './components/Pages/ContactMe';
 import ShoppingList from './components/Pages/ShoppingList';
-import { theme } from './themes/Theme'
-
-
+import AboutMe from './components/Pages/AboutMe'
 import { BookProvider } from './components/Reading-List/BookContext';
 import ReadingList from './components/Pages/ReadingList';
 import BookDetail from './components/Reading-List/BookDetail';
 
 function App() {
   return (
-    
-
       <Router>
         <div className="App">   
           <BookProvider>
             <Routes>
               <Route path="/" element={<Home />}></Route>
+              <Route path='AboutMe' element={<AboutMe />}></Route>
               <Route path="/SmallProjectsPage" element={<SmallProjectsPage />}></Route>
               <Route path="/Hire" element={<Hire />}></Route>
               <Route path='/ShoppingList' element={<ShoppingList />}></Route>

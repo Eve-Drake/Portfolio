@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Button } from "@mui/material";
 
 const UserGenerator = () => {
   const [user, setUser] = useState(null);
@@ -17,7 +16,7 @@ const UserGenerator = () => {
     
   return (
     <div >
-      <Button onClick={fetchData}>Click to Generate Person</Button>
+      <button onClick={fetchData}>Click to Generate Person</button>
       {loading && <p>Loading User...</p>}
       {user && 
       <div>

@@ -95,8 +95,8 @@ const GameBoard = () => {
     <div>
         <h2>{cardName}{suitName}</h2>
         <p> Value: {value} </p>
-        <Button onClick={()=>(draw())}>Draw</Button>
-        <Button onClick={()=>(newGame())}>Reset Deck</Button>
+        <button onClick={()=>(draw())}>Draw</button>
+        <button onClick={()=>(newGame())}>Reset Deck</button>
         
     </div>
   )
