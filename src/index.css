@@ -1,57 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600&display=swap');
 .App {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Lato', sans-serif;
   width: 100%;
+  background-color: #FFA07A;
 }
 
-.hero a:hover {
-  color: #fff;
+.landing-page{
+  height: 100vh;
+}
+.heading{
+  font-family: 'Playfair Display', serif;
+}
+.bold{
+  font-weight: 700;
 }
 
-h1 {
-  font-weight: 600;
-  border: 1px;
-  font-size: 35px;
+.landing-left{
+  font-size: medium;
 }
 
-p {
-  padding: 5px;
-  text-align: justify;
-  font-weight: 300;
+
+.hidden{
+  display: none;
 }
 
-ul, li {
-  padding-left: 20px;
-}
 
-.nav a {
-  text-decoration: none;
-  text-decoration: inherit;
-  color: white;
-}
-
-home a {
-  color: #fff;
-}
-
-.strike {
-  text-decoration: line-through;
-}
-
-.normal {
-  font-size: larger;
-}
-
-.select {
-  margin-left: 10px;
-  width: 150px;
-  padding: 5px 35px 5px 5px;
-  font-size: 16px;
-  border: 1px solid #ef6c00;
-  border-radius: 10px;
-  height: 34px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url(https://www.svgrepo.com/show/25789/down-arrow.svg) 96%/15% no-repeat #EEE;
+.nav-button{
+  
 }

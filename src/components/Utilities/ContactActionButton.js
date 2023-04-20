@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ContactActionButton = () => {
   return (
-    <div>
-        <div>
-            comment
-        </div>
-    </div>
+    <button component={Link} to="ContactMe" variant='contained' size='large' color='secondary' >Contact Me</button>
   )
 }
 
