@@ -1,6 +1,5 @@
 import Nav from '../Utilities/Nav';
 import { Link } from 'react-router-dom';
-import ContactActionButton from '../Utilities/ContactActionButton';
 
 const Home = () => {
     return (  
@@ -13,7 +12,6 @@ const Home = () => {
 			</div>
 			<h2 className='landing-p'><span className='bold'>Eve Drake</span>- Frontend Web Development</h2>
 				
-			<ContactActionButton />
 		</main>
      );
 }

@@ -2,7 +2,6 @@ import { useState, useContext, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { BookContext } from './BookContext';
 import { useNavigate } from "react-router-dom";
-import ContactActionButton from '../Utilities/ContactActionButton';
 import Nav from '../Utilities/Nav'
 
 const BookDetail = () => {
@@ -77,7 +76,6 @@ const BookDetail = () => {
   return (
     <div>
         <Nav />
-        <ContactActionButton />
         <div>
             <h1> Book Detail</h1>
             <div>

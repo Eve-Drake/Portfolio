@@ -1,7 +1,6 @@
 import ShoppingListForm from '../Shopping-List/ShoppingListForm'
 import { useState, useEffect } from "react";
 import ShoppingListItemList from '../Shopping-List/ShoppingListItemList'
-import ContactActionButton from '../Utilities/ContactActionButton';
 import Nav from '../Utilities/Nav';
 
 const Shopping = () => {
@@ -30,17 +29,22 @@ const Shopping = () => {
 
 
   return (
-    <div>
+    <>
       <Nav />
-      <ContactActionButton />
       <div>
-          <div>
-            <h2 >A Simple Shopping List</h2>
-            <h3>Functionality...</h3>
-            <p>This is a shopping list created to demonstrate passing values and functions from parent components to child 
-              components.It consists of: Shopping, ShoppingListForm, ShoppingListItemList and ShoppingList Item. 
-              The parent component contains all the state (the shopping list and any selected filter). </p>
-          </div>
+          
+          <h2>The Shopping List</h2>
+          <h3>Functionality...</h3>
+          <p>
+            This page features a shopping list application that showcases the fundamental aspects of React development, 
+            including passing down props, managing state, and using forms.
+          </p>
+          <p>
+              This section of the website is made up of four components: Shopping, ShoppingListForm, 
+              ShoppingListItemList, and ShoppingListItem. The parent component holds all the state, including the 
+              shopping list inself (in the form of an array) and any selected filters. 
+            </p>
+          
       </div>
 
       <div>
@@ -58,7 +62,7 @@ const Shopping = () => {
             filteredList = {filteredList}  
             />
       </div>
-    </div>
+    </>
   )
 }
 

@@ -3,6 +3,7 @@
   background-color:  #F5F5F5;
   color: #333333;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -58,7 +59,9 @@
 }
 
 nav{
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   margin: 10px;
   border-right: 1px solid #ccc;
   border-radius: 10px;
@@ -80,10 +83,87 @@ nav{
 .nav-button{
   background: none;
   border: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
 }
 
 nav li{
   list-style: none;
   padding: 0.5rem;
   color: #333333;
+}
+
+.about-heading{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 5vw;
+  
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-heading h3{
+  font-size: 9vw;
+  animation: fadeIn 1s;
+}
+
+.about-heading h4{
+  grid-row: 2;
+  grid-column: 2;
+  font-size: 5vw;
+  animation: fadeIn 3s;
+}
+
+#about-me-body{
+  padding: 10vw;
+  text-align: justify;
+  animation: fadeIn 3s;
+  min-height: 100vh;
+  display: grid;
+  gap: 10vh;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text-link, a {
+  color: #008080;
+}
+
+
+.text-link:hover, a:hover{
+  text-decoration: underline;
+  color: #008080;
+}
+
+.about-icon{
+  font-size: 20vw;
+  margin: 0 auto;
+}
+
+
+
+.about-website-body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2;
+  gap: 10vh;
+  text-align: center;
+  padding: 10vw;
+}
+
+.about-website-body h3{
+  font-size: 5vw;
+  font-family:  'Playfair Display', serif;
+  grid-column: span 2;
+}
+
+.about-website-body h4{
+  text-align: center;
+}
+
+.about-website-body p{
+  text-align: justify;
 }
