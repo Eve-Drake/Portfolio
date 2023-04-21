@@ -7,11 +7,12 @@ const Home = () => {
 		<main className='landing-page'>
 			<Nav />
 			<div className='heading'>
-				<h1>Captivating Code</h1>
-				<h1>Delightful Design</h1>
+				<h1 className='heading-left'>Captivating <span className='bold'>Code</span></h1>
+				
+				<h1 className='heading-right'>Delightful <span className='bold'>Design</span></h1>
 			</div>
-			
-			<h2 className='landing-left'><span className='bold'>Eve Drake</span> Frontend Web Development</h2>	
+			<h2 className='landing-p'><span className='bold'>Eve Drake</span>- Frontend Web Development</h2>
+				
 			<ContactActionButton />
 		</main>
      );

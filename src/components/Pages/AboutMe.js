@@ -1,10 +1,13 @@
 import React from 'react'
+import Nav from '../Utilities/Nav'
 
 const AboutEve = () => {
   return (
-    <div>					<span >
-    <h3>Hi...</h3>
-    <h4>Personal Statement</h4>
+    <>
+    <Nav />			
+      <span >
+    <h3>Hello...</h3>
+    <h4>My Name is Eve</h4>
     <p>
       Having completed my academic studies, I am now looking forward to continuing improving my front end development skills in a 
       professional environment. From my studies, I have gained in depth knowledge of front end web development, object oriented 
@@ -22,7 +25,8 @@ const AboutEve = () => {
       (to determine branding) and technical department (for functional aspects), giving me the experience of handling multiple stakeholders 
       throughout a project.
     </p>
-  </span></div>
+  </span>
+  </>
   )
 }
 
