@@ -1,57 +1,54 @@
+import { useState } from "react";
 
-const ShoppingListForm = ({setItem, shoppingList, setShoppingList, item, setFilter}) => {
+const ShoppingListForm = ({shoppingList, setShoppingList, setFilter}) => {
 
-    const handleChange = (e) =>{
-        setItem(e.target.value)
-    }
+    const [item, setItem] = useState('')
+    const [noItem, setNoItem] = useState(false)
 
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-        setShoppingList([
-            ...shoppingList, {text: item, obtained: false, id: Math.random()*1000 }
-        ]);
-        setItem('')
+    const handleSubmit = () =>{
+
+        if(item){
+            setShoppingList([
+                ...shoppingList, {text: item, obtained: false, id: Math.random()*1000 }
+            ]);
+            setItem('')
+        }
+        else{
+            setNoItem(true)
+        }
+        
     }
 
     const handleFilter = (e)=>{
         setFilter(e.target.value)
     }
+
   return (
-    <div>
-        <form onSubmit={handleSubmit}>
-                <span>
-                    <span item sx={{p: 1}}>
-                        <input 
-                            type="text" 
-                            required
-                            placeholder="Enter an Item"
-                            onChange={handleChange}
-                            value = {item}
-                            className="form-control" 
-                            id="itemName" 
-                            aria-describedby="itemName" />
-                    </span>
-                        
-                    <span >  
-                        <button>Submit</button>
-                    </span>  
-                    
+    
+        <div className="shopping-list-form">
+            <input 
+                className="shopping-list-form-input"
+                onChange={e => setItem(e.target.value)}
+                type="text"
+                required
 
-                    <span>
-                        
-                        <label >Filter List</label>
-                            <select className="select" onChange={handleFilter} aria-label="Filter">
-                                <option defaultValue="all">All</option>
-                                <option value="pending">Pending</option>
-                                <option value="purchased">Purchased</option>
-                            </select> 
-                    </span>
-                </span>
+            />
 
-        </form>            
+            <button onClick={handleSubmit} className="shopping-list-form-button">Add</button>
+            
+            <div className="shopping-list-filter">
+                <label htmlFor="filter-select">Filter List: </label>
+                <select className="filter-select" onChange={handleFilter} aria-label="filter-select">
+                    <option defaultValue="all">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="purchased">Purchased</option>
+                </select> 
+            </div>
+                
+        </div>            
         
         
-    </div>
+    
   )
 }
 

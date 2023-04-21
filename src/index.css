@@ -26,8 +26,6 @@
   gap: 10vh;
 }
 
-
-
 @keyframes fadeIn{
   0% {opacity: 0;}
   100% {opacity: 1;}
@@ -143,8 +141,6 @@ nav li{
   margin: 0 auto;
 }
 
-
-
 .about-website-body{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -166,4 +162,74 @@ nav li{
 
 .about-website-body p{
   text-align: justify;
+}
+
+.shopping-list-heading{
+  padding: 3vh 10vw;
+  animation: fadeIn 1s;
+}
+
+.shopping-list-form{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 5vh 10vw;
+  gap: 5vw;
+  animation: fadeIn 4s;
+}
+
+.shopping-list-form-input{
+  grid-column: 1;
+  border: 1px solid #008080;
+  border-radius: 10px;
+}
+
+.shopping-list-form-button{
+  grid-column: 2;
+  border: 1px solid #008080;
+  border-radius: 10px;
+}
+
+.filter-select{
+  border: 1px solid #008080;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+.item-name{
+  padding: 10px;
+}
+
+.strikethrough{
+  text-decoration: line-through;
+}
+
+.shopping-list-item-grid{
+  padding: 0 15vw;
+}
+
+.shopping-list-item{
+  display: grid;
+  grid-template-columns: 4;
+  margin: 2vh;
+  border: #008080 1px solid;
+  border-radius: 5px;
+  animation: fadeIn 1s;
+}
+
+.shopping-list-item h5{
+  background: inherit;
+  grid-column: span 2;
+}
+
+.shopping-list-check{
+  grid-column: 3;
+}
+
+.shopping-list-delete{
+  grid-column: 4;
+}
+
+.shopping-list-item button{
+  background: inherit;
+  border: none;
 }

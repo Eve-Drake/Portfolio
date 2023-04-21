@@ -4,7 +4,7 @@ import ShoppingListItem from './ShoppingListItem'
 const ShoppingListItemList = ({shoppingList, setShoppingList, filteredList }) => {
 
   return (
-    <div >
+    <div className='shopping-list-item-grid'>
 
         {filteredList.map(item =>(
             <ShoppingListItem 

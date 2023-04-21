@@ -1,4 +1,4 @@
-
+import { FaTimesCircle, FaCheckCircle} from "react-icons/fa";
 
 
 const ShoppingListItem = ({shoppingList, setShoppingList, item}) => {
@@ -22,25 +22,11 @@ const ShoppingListItem = ({shoppingList, setShoppingList, item}) => {
         )
     }
 
-   
-
   return (
-    <div>
-    
-    <div>
-        <span div>
-            <span item md={11}>
-                <div><p className={(item.obtained === false ? 'normal' : 'strike')}>{item.text}</p></div>
-            </span>
-            <span item>
-                <div><button onClick={handleObtained}>tick</button></div>
-            </span>
-            <span item>
-                <div><button onClick={handleDelete}>bin</button></div>
-            </span>
-        </span>
-        
-    </div>
+    <div className="shopping-list-item">
+        <h5 className={(item.obtained === false ? 'item-name' : ' item-name strikethrough')}>{item.text}</h5>
+        <button className='shopping-list-check' onClick={handleObtained}><FaCheckCircle /></button>
+        <button className='shopping-list-delete' onClick={handleDelete}><FaTimesCircle /></button>
     </div>
   )
 }
