@@ -233,3 +233,27 @@ nav li{
   background: inherit;
   border: none;
 }
+textarea{
+  height: 20vh;
+}
+
+.email{
+  color: #008080;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+.contact-icons .icon:hover{
+  cursor: pointer;
+}
+
+.reading-list{
+  padding: 1rem 10rem;
+}
+
+.reading-list-from-container{
+  display: grid;
+  grid-template-rows: 5;
+  grid-template-columns: 2;
+  width: 50vw;
+}

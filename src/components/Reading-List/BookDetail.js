@@ -76,50 +76,43 @@ const BookDetail = () => {
   return (
     <div>
         <Nav />
-        <div>
-            <h1> Book Detail</h1>
-            <div>
-                <span div>
-                    <span >
-                        <button>Back</button>
-                        <button>Delete</button>
-                    </span>
+        <h1> Book Detail</h1>
+        <button>Back</button>
+        <button>Delete</button>
+                    
 
-                    <span >
-                        <h2 >{book.title}</h2>
-                        <h5 >Genre: {book.genres}</h5>
-                        <h3 >By {book.author}</h3>
-                    </span>
-                    <span >
-                        Progress
-                    </span>
-                    <span >
-                        <button>Author Info</button>
-                            {authorInfo && 
-                                <div>
-                                    <div>
-                                        <p>Birth Year: {birthDate}</p>
-                                        <p>Bestselling Work: {topWork}</p>
-                                        <p>Total Number of Works: {numWorks}</p>
-                                    </div>    
-                                </div>
-                            }
-                            {more &&
-                                <div>
-                                    <button onClick={handleMore}>View More Works?</button>
-                                    <span>
-                                        {works.map((work)=>
-                                            <li >{work.title}</li>
-                                        )}
-                                    </span>
-                                </div>
-                            } 
-                        {loading && <h1>Loading...</h1>}
-                    </span>
-                </span>
-            </div>
+        <div className='reading-list-book-info'>
+            <h2 >{book.title}</h2>
+            <h5 >Genre: {book.genres}</h5>
+            <h3 >By {book.author}</h3>
         </div>
+                    
+        <span >
+            <button>Author Info</button>
+                {authorInfo && 
+                    <div>
+                        <p>Birth Year: {birthDate}</p>
+                        <p>Bestselling Work: {topWork}</p>
+                        <p>Total Number of Works: {numWorks}</p>  
+                    </div>
+                }
+
+                {more &&
+                    <div>
+                        <button onClick={handleMore}>View More Works?</button>
+                            <span>
+                            {works.map((work)=>
+                                <li >{work.title}</li>
+                            )}
+                            </span>
+                    </div>
+                } 
+                {loading && <h1>Loading...</h1>}
+        </span>
+                
     </div>
+        
+    
   )
 }
 

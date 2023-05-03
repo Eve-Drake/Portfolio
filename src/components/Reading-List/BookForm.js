@@ -7,6 +7,8 @@ import { BookContext } from './BookContext';
 const BookForm = () => {
   const [books, setBooks] = useContext(BookContext);
 
+  const [showForm, setShowForm] = useState(true)
+
   const [title, setTitle] = useState();
   const [author, setAuthor] = useState();
   const [genre, setGenre] = useState();
@@ -27,48 +29,61 @@ const BookForm = () => {
   }
 
   return (
-    <div>
+    <>
+    <button onClick={() => setShowForm(!showForm)}>{showForm ? 'Close Form' : 'Add Book'}</button>
+      
+    <form onSubmit={handleSubmit} className={showForm? 'reading-list-form-container' : 'hidden'}>
+      
       <div>
-          <form onSubmit={handleSubmit} >
-            <label htmlFor='title'>Title</label>
-              <input 
-              type='text'
-              value ={title}
-              onChange={(e) => setTitle(e.target.value)}
-              />
+        <label htmlFor='title'>Title</label>
+        <input 
+          type='text'
+          value ={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>      
+      
+      <div>
+        <label htmlFor='author'>Author</label>
+        <input  
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+        />        
+      </div>
 
-            <label htmlFor='author'>Author</label>
-              <input  
-                value={author}
-                onChange={(e) => setAuthor(e.target.value)}
-                />
+      <div>
+        <label htmlFor='genre'>Genre</label>
+        <input
+          type='text'
+          value={genre}
+          onChange={(e) => setGenre(e.target.value)}
+        />  
+      </div>
+
+      <div>
+        <label htmlFor='pages'>Current Page</label>
+        <input
+          type='number'
+          value={pages}
+          onChange={(e) => setPages(e.target.value)}
+        />
+      </div>
             
-            <label htmlFor='genre'>Genre</label>
-              <input
-              type='text'
-              value={genre}
-              onChange={(e) => setGenre(e.target.value)}
-              />  
-
-            <label htmlFor='pages'>Current Page</label>
-              <input
-                type='number'
-                value={pages}
-                onChange={(e) => setPages(e.target.value)}
-                />
-
-            <label htmlFor='totalPages'>Total Pages</label>
-              <input 
-                type='number'
-                value={totalPages}
-                onChange={(e) => setTotalPages(e.target.value)}
-                />
-                <button type='submit'variant="contained">Submit</button>
-            </form>
-      </div>
+      <div>
+        <label htmlFor='totalPages'>Total Pages</label>
+        <input 
+          type='number'
+          value={totalPages}
+          onChange={(e) => setTotalPages(e.target.value)}
+        />
+      </div>   
+   
+      <button type='submit'variant="contained">Submit</button>
+    </form>
+      
 
 
-      </div>
+      </>
   )
 }
 
