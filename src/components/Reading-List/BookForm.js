@@ -7,20 +7,17 @@ import { BookContext } from './BookContext';
 const BookForm = () => {
   const [books, setBooks] = useContext(BookContext);
 
-  const [showForm, setShowForm] = useState(true)
+  const [showForm, setShowForm] = useState(false)
 
   const [title, setTitle] = useState();
   const [author, setAuthor] = useState();
   const [genre, setGenre] = useState();
   const [pages, setPages] = useState();
   const [totalPages, setTotalPages] = useState();
-  const [newId, setNewId] = useState(Math.floor(Math.random()*1000))
-  
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    setNewId(newId+1)//prevents repeat ids
-    setBooks([...books, {title: title, author: author, genre: genre, pages: pages, currentPage: totalPages, id : newId}]);
+    setBooks([...books, {title: title, author: author, genre: genre, pages: pages, currentPage: totalPages, id : Math.floor(Math.random()*1000)}]);
     setAuthor('');
     setTitle('');
     setGenre('');
